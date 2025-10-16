@@ -1,6 +1,7 @@
 // ========================================
 // TASK 5: Display Current Date and Time
 // ========================================
+// Author: Chingiz
 // This function displays current date and time in the footer
 
 function updateDateTime() {
@@ -34,7 +35,7 @@ if (document.getElementById('current-datetime')) {
 // ========================================
 // TASK 4: Change Background Color
 // ========================================
-// Author: [Your Name]
+// Author: Chingiz
 // This function changes the background color when button is clicked
 
 function changeBackgroundColor() {
