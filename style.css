@@ -378,7 +378,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== Content Sections ===== */
 .about-content {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -392,6 +392,26 @@ a { text-decoration: none; color: inherit; }
 }
 .about-content li {
     margin-bottom: 8px;
+}
+
+/* ===== About Page - Chef Section ===== */
+.chef-info {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.chef-info img {
+    max-width: 400px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.chef-details {
+    flex: 1;
 }
 
 /* ===== Footer ===== */
@@ -456,6 +476,9 @@ a { text-decoration: none; color: inherit; }
     }
     .chef-info {
         flex-direction: column !important;
+    }
+    .chef-info img {
+        max-width: 100%;
     }
     .popup-content {
         padding: 30px 20px;
