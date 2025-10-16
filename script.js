@@ -1,7 +1,6 @@
 // ========================================
 // TASK 5: Display Current Date and Time
 // ========================================
-// Author: [Your Name]
 // This function displays current date and time in the footer
 
 function updateDateTime() {
