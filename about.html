@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Task 1: Flexbox Header / Nav -->
+  <!-- Header with Navigation -->
   <header class="main-header">
     <div class="logo">God loves the Trinity</div>
     <nav class="navigation">
@@ -18,8 +18,8 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="reserve.html">Reservations</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <!-- TASK 3: Popup subscription button -->
         <li><button id="subscribe-btn" class="subscribe-button">Subscribe</button></li>
+        <li><button id="theme-toggle" class="subscribe-button">🌙 Night Mode</button></li>
       </ul>
     </nav>
   </header>
@@ -30,6 +30,9 @@
       <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop"
            alt="Restaurant dining room" class="banner-image">
     </section>
+
+    <!-- Time-based Greeting -->
+    <section id="time-greeting"></section>
 
     <section class="about-content">
       <h2>Our Story</h2>
@@ -74,7 +77,7 @@
       </ul>
     </section>
 
-    <!-- TASK 2: Accordion FAQ Section -->
+    <!-- FAQ Accordion Section -->
     <section class="about-content">
       <h2>Frequently Asked Questions</h2>
       <div class="accordion">
@@ -158,7 +161,7 @@
     </section>
   </main>
 
-  <!-- TASK 3: Popup Subscription Form -->
+  <!-- Popup Subscription Form -->
   <div id="subscription-popup" class="popup-overlay">
     <div class="popup-content">
       <span id="close-popup" class="close-btn">&times;</span>
@@ -174,12 +177,10 @@
   <footer>
     <p>&copy; 2024 God loves the Trinity Restaurant. All rights reserved.</p>
     <p>Address: 123 Divine Street, Heaven's Gate City</p>
-    <!-- TASK 5: Current Date and Time -->
     <p class="datetime-display">Current time: <span id="current-datetime"></span></p>
     <p class="team-members">Team: Newcomers(Chingiz, Sultan, Kaisar) Group: SE-2405</p>
   </footer>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
