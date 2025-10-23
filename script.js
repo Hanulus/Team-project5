@@ -6,19 +6,56 @@
 // Author: Chingiz
 // Dynamic greeting based on user input
 function initializeGreeting() {
-  const greetingElement = document.getElementById('current-datetime');
+  const greetingResult = document.getElementById('greeting-result');
   const nameInput = document.getElementById('user-name-input');
   const greetingButton = document.getElementById('greeting-btn');
   
-  if (greetingButton && nameInput && greetingElement) {
+  if (greetingButton && nameInput && greetingResult) {
     greetingButton.addEventListener('click', function() {
       const userName = nameInput.value.trim();
       if (userName) {
-        greetingElement.textContent = `Hello, ${userName}! Welcome to God loves the Trinity!`;
+        greetingResult.textContent = `Hello, ${userName}! Welcome to God loves the Trinity!`;
+        greetingResult.style.color = '#8B4513';
+        playClickSound();
       } else {
-        greetingElement.textContent = 'Please enter your name!';
+        greetingResult.textContent = 'Please enter your name!';
+        greetingResult.style.color = '#d32f2f';
       }
     });
+  }
+}
+
+// ===== ВОССТАНОВЛЕНО: Change Background Color (7 цветов) =====
+// Author: Chingiz
+// This function changes the background color when button is clicked
+function changeBackgroundColor() {
+  const colors = [
+    '#f5f5f0', // original beige
+    '#e8f4f8', // light blue
+    '#fff5e6', // light orange
+    '#f0e6ff', // light purple
+    '#e6ffe6', // light green
+    '#ffe6f0', // light pink
+    '#fff9e6'  // light yellow
+  ];
+  
+  const currentColor = document.body.style.backgroundColor || 'rgb(245, 245, 240)';
+  let newColor;
+  
+  do {
+    newColor = colors[Math.floor(Math.random() * colors.length)];
+  } while (newColor === currentColor);
+  
+  document.body.style.backgroundColor = newColor;
+  document.body.style.transition = 'background-color 0.5s ease';
+  playClickSound();
+}
+
+// Add event listener for background color button
+function initializeBackgroundChanger() {
+  const bgButton = document.getElementById('bg-color-btn');
+  if (bgButton) {
+    bgButton.addEventListener('click', changeBackgroundColor);
   }
 }
 
@@ -201,7 +238,7 @@ function initializeKeyboardNavigation() {
   }
 }
 
-// ===== TASK 2.3: Callbacks - Form Submission =====
+// ===== TASK 2.3: Callbacks - Reservation Form Submission =====
 // Author: Sultan
 function validateReservationForm(event) {
   event.preventDefault();
@@ -227,61 +264,7 @@ function validateReservationForm(event) {
   }
   
   // Validate Email
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (email && (!email.value.trim() || !emailRegex.test(email.value))) {
-    showError(email, 'Please enter a valid email address');
-    isValid = false;
-  }
-  
-  // Validate Phone
-  const phoneRegex = /^\d{10,}$/;
-  if (phone) {
-    const phoneDigits = phone.value.replace(/\D/g, '');
-    if (!phoneDigits || phoneDigits.length < 10) {
-      showError(phone, 'Phone number must be at least 10 digits');
-      isValid = false;
-    }
-  }
-  
-  // Validate Party Size
-  if (partySize && !partySize.value) {
-    showError(partySize, 'Please select party size');
-    isValid = false;
-  }
-  
-  // Validate Date
-  if (date && !date.value) {
-    showError(date, 'Please select a date');
-    isValid = false;
-  } else if (date && date.value) {
-    const selectedDate = new Date(date.value);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    if (selectedDate < today) {
-      showError(date, 'Date cannot be in the past');
-      isValid = false;
-    }
-  }
-  
-  // Validate Time
-  if (time && !time.value) {
-    showError(time, 'Please select a time');
-    isValid = false;
-  }
-  
-  // If valid, submit with callback
-  if (isValid) {
-    submitReservation(event.target, function(success) {
-      if (success) {
-        playSuccessSound();
-        showSuccessMessage('Reservation submitted successfully! We will contact you shortly to confirm.');
-        event.target.reset();
-      } else {
-        showErrorMessage('Failed to submit reservation. Please try again.');
-      }
-    });
-  }
-}
+  const emailRegex = /^[^\s@]+@
 
 function submitReservation(form, callback) {
   // Simulate async submission
@@ -701,6 +684,7 @@ function handleSubscription(event) {
 document.addEventListener('DOMContentLoaded', function() {
   // Part 1: DOM Manipulation
   initializeGreeting();
+  initializeBackgroundChanger(); // ВОССТАНОВЛЕНО
   initializeThemeSwitcher();
   initializeRatingSystem();
   
