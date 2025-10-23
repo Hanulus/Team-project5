@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Task 1: Flexbox Header / Nav -->
+  <!-- Header with Navigation -->
   <header class="main-header">
     <div class="logo">God loves the Trinity</div>
     <nav class="navigation">
@@ -18,8 +18,8 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="reserve.html">Reservations</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <!-- TASK 3: Popup subscription button -->
         <li><button id="subscribe-btn" class="subscribe-button">Subscribe</button></li>
+        <li><button id="theme-toggle" class="subscribe-button">🌙 Night Mode</button></li>
       </ul>
     </nav>
   </header>
@@ -34,13 +34,32 @@
       </div>
     </section>
 
-    <!-- TASK 4: Background Color Changer -->
-    <section class="bg-color-section">
-      <p>Want to change the mood? Try a different background color!</p>
-      <button id="bg-color-btn" class="button-style">Change Background Color</button>
+    <!-- TASK: Time-based Greeting with Switch Statement -->
+    <section id="time-greeting"></section>
+
+    <!-- TASK: User Name Input - DOM Manipulation -->
+    <section class="greeting-input-section">
+      <h2>Personalized Greeting</h2>
+      <p>Enter your name to receive a personalized welcome message!</p>
+      <input type="text" id="user-name-input" placeholder="Your name">
+      <button id="greeting-btn">Get Greeting</button>
     </section>
 
-    <!-- Task 2: Card Row -->
+    <!-- TASK: Star Rating System - DOM Manipulation -->
+    <section class="rating-container">
+      <h2>Rate Your Experience</h2>
+      <p>Click on the stars to rate our restaurant!</p>
+      <div class="rating-stars">
+        <span class="rating-star">☆</span>
+        <span class="rating-star">☆</span>
+        <span class="rating-star">☆</span>
+        <span class="rating-star">☆</span>
+        <span class="rating-star">☆</span>
+      </div>
+      <div id="rating-display">Select a rating above</div>
+    </section>
+
+    <!-- Card Row -->
     <section class="card-container">
       <div class="card">
         <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=300&h=200&fit=crop" alt="Fresh Ingredients">
@@ -68,7 +87,7 @@
       </div>
     </section>
 
-    <!-- Task 3: Grid Layout -->
+    <!-- Grid Layout -->
     <section class="layout">
       <div class="layout-header">About our Restaurant</div>
       <aside class="sidebar">God loves the Trinity</aside>
@@ -76,7 +95,19 @@
       <div class="footer">Inside our Restaurant</div>
     </section>
 
-    <!-- Task 4: Image Gallery -->
+    <!-- TASK: Dynamic Menu Display - Arrays and Loops -->
+    <section id="dynamic-menu">
+      <h2>Our Menu</h2>
+      <p>Loading menu items...</p>
+    </section>
+
+    <!-- TASK: Special Offers - Higher-Order Functions -->
+    <section id="special-offers">
+      <h2>Special Offers</h2>
+      <p>Check out our current promotions!</p>
+    </section>
+
+    <!-- Image Gallery -->
     <section class="gallery">
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop" alt="Hall"><div class="caption">Hall</div></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop" alt="Inside"><div class="caption">Inside</div></div>
@@ -84,6 +115,12 @@
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&h=300&fit=crop" alt="Terrace"><div class="caption">Terrace</div></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop" alt="Tables"><div class="caption">Tables</div></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop" alt="Dining Area"><div class="caption">Dining Area</div></div>
+    </section>
+
+    <!-- TASK: Customer Reviews - Objects and Methods -->
+    <section id="reviews-container">
+      <h2>Customer Reviews</h2>
+      <p>Loading reviews...</p>
     </section>
 
     <!-- CTA -->
@@ -94,7 +131,7 @@
     </section>
   </main>
 
-  <!-- TASK 3: Popup Subscription Form -->
+  <!-- Popup Subscription Form -->
   <div id="subscription-popup" class="popup-overlay">
     <div class="popup-content">
       <span id="close-popup" class="close-btn">&times;</span>
@@ -108,14 +145,5 @@
   </div>
 
   <footer class="site-footer">
-    <p>&copy; 2029 God loves the Trinity Restaurant. All rights reserved.</p>
-    <p>Address: 123 Divine Street, Heaven's Gate City</p>
-    <!-- TASK 5: Current Date and Time -->
-    <p class="datetime-display">Current time: <span id="current-datetime"></span></p>
-    <p class="team-members">Team: Newcomers(Chingiz, Sultan, Kaisar) Group: SE-2405</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
-</body>
-</html>
+    <p>&copy; 2024 God loves the Trinity Restaurant. All rights reserved.</p>
+    <p>Address: 123 Divine Street, Heaven's Gate City
