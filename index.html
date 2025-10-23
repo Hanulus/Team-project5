@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Header with Navigation -->
+  <!-- Task 1: Flexbox Header / Nav -->
   <header class="main-header">
     <div class="logo">God loves the Trinity</div>
     <nav class="navigation">
@@ -34,18 +34,26 @@
       </div>
     </section>
 
-    <!-- TASK: Time-based Greeting with Switch Statement -->
+    <!-- НОВОЕ: Time-based Greeting -->
     <section id="time-greeting"></section>
 
-    <!-- TASK: User Name Input - DOM Manipulation -->
+    <!-- ВОССТАНОВЛЕНО: Background Color Changer -->
+    <section class="bg-color-section">
+      <h2>Change Background Color</h2>
+      <p>Want to change the mood? Try a different background color!</p>
+      <button id="bg-color-btn" class="button-style">Change Background Color</button>
+    </section>
+
+    <!-- НОВОЕ: Personalized Greeting Input -->
     <section class="greeting-input-section">
       <h2>Personalized Greeting</h2>
       <p>Enter your name to receive a personalized welcome message!</p>
       <input type="text" id="user-name-input" placeholder="Your name">
       <button id="greeting-btn">Get Greeting</button>
+      <p id="greeting-result" style="margin-top: 15px; font-size: 1.2rem; color: #8B4513; font-weight: bold;"></p>
     </section>
 
-    <!-- TASK: Star Rating System - DOM Manipulation -->
+    <!-- НОВОЕ: Star Rating System -->
     <section class="rating-container">
       <h2>Rate Your Experience</h2>
       <p>Click on the stars to rate our restaurant!</p>
@@ -59,7 +67,7 @@
       <div id="rating-display">Select a rating above</div>
     </section>
 
-    <!-- Card Row -->
+    <!-- Task 2: Card Row -->
     <section class="card-container">
       <div class="card">
         <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=300&h=200&fit=crop" alt="Fresh Ingredients">
@@ -87,7 +95,7 @@
       </div>
     </section>
 
-    <!-- Grid Layout -->
+    <!-- Task 3: Grid Layout -->
     <section class="layout">
       <div class="layout-header">About our Restaurant</div>
       <aside class="sidebar">God loves the Trinity</aside>
@@ -95,19 +103,17 @@
       <div class="footer">Inside our Restaurant</div>
     </section>
 
-    <!-- TASK: Dynamic Menu Display - Arrays and Loops -->
+    <!-- НОВОЕ: Dynamic Menu Display -->
     <section id="dynamic-menu">
-      <h2>Our Menu</h2>
-      <p>Loading menu items...</p>
+      <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Our Menu</h2>
     </section>
 
-    <!-- TASK: Special Offers - Higher-Order Functions -->
+    <!-- НОВОЕ: Special Offers -->
     <section id="special-offers">
-      <h2>Special Offers</h2>
-      <p>Check out our current promotions!</p>
+      <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Special Offers</h2>
     </section>
 
-    <!-- Image Gallery -->
+    <!-- Task 4: Image Gallery -->
     <section class="gallery">
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop" alt="Hall"><div class="caption">Hall</div></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop" alt="Inside"><div class="caption">Inside</div></div>
@@ -117,10 +123,9 @@
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop" alt="Dining Area"><div class="caption">Dining Area</div></div>
     </section>
 
-    <!-- TASK: Customer Reviews - Objects and Methods -->
+    <!-- НОВОЕ: Customer Reviews -->
     <section id="reviews-container">
-      <h2>Customer Reviews</h2>
-      <p>Loading reviews...</p>
+      <h2 style="text-align: center; color: #8B4513; margin-bottom: 20px;">Customer Reviews</h2>
     </section>
 
     <!-- CTA -->
@@ -131,7 +136,7 @@
     </section>
   </main>
 
-  <!-- Popup Subscription Form -->
+  <!-- TASK 3: Popup Subscription Form -->
   <div id="subscription-popup" class="popup-overlay">
     <div class="popup-content">
       <span id="close-popup" class="close-btn">&times;</span>
@@ -146,4 +151,13 @@
 
   <footer class="site-footer">
     <p>&copy; 2024 God loves the Trinity Restaurant. All rights reserved.</p>
-    <p>Address: 123 Divine Street, Heaven's Gate City
+    <p>Address: 123 Divine Street, Heaven's Gate City</p>
+    <!-- TASK 5: Current Date and Time -->
+    <p class="datetime-display">Current time: <span id="current-datetime"></span></p>
+    <p class="team-members">Team: Newcomers(Chingiz, Sultan, Kaisar) Group: SE-2405</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
