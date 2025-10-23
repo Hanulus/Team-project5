@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Task 1: Flexbox Header / Nav -->
+  <!-- Header with Navigation -->
   <header class="main-header">
     <div class="logo">God loves the Trinity</div>
     <nav class="navigation">
@@ -18,8 +18,8 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="reserve.html">Reservations</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <!-- TASK 3: Popup subscription button -->
         <li><button id="subscribe-btn" class="subscribe-button">Subscribe</button></li>
+        <li><button id="theme-toggle" class="subscribe-button">🌙 Night Mode</button></li>
       </ul>
     </nav>
   </header>
@@ -30,14 +30,17 @@
       <p class="highlighted-text">Secure your divine dining experience</p>
     </section>
 
+    <!-- Time-based Greeting -->
+    <section id="time-greeting"></section>
+
     <section class="about-content">
       <h2>Reservation Information</h2>
       <p>We highly recommend making reservations, especially for dinner service and weekends. Our dining room fills up quickly!</p>
       <p>For parties of 8 or more, please call us directly at (555) 123-HOLY to ensure we can accommodate your group properly.</p>
     </section>
 
-    <!-- TASK 1: Form with Validation -->
-    <form class="contact-form" style="max-width:700px; margin: 0 auto; background:#fff; padding:20px; border-radius:8px;">
+    <!-- Reservation Form with Validation -->
+    <form class="contact-form" id="reservation-form" style="max-width:700px; margin: 0 auto; background:#fff; padding:20px; border-radius:8px;">
       <div class="form-group">
         <label for="guest-name">Name: <span style="color: red;">*</span></label>
         <input type="text" id="guest-name" name="guest-name" required>
@@ -117,7 +120,7 @@
     </section>
   </main>
 
-  <!-- TASK 3: Popup Subscription Form -->
+  <!-- Popup Subscription Form -->
   <div id="subscription-popup" class="popup-overlay">
     <div class="popup-content">
       <span id="close-popup" class="close-btn">&times;</span>
@@ -133,12 +136,10 @@
   <footer>
     <p>&copy; 2024 God loves the Trinity Restaurant. All rights reserved.</p>
     <p>Address: 123 Divine Street, Heaven's Gate City</p>
-    <!-- TASK 5: Current Date and Time -->
     <p class="datetime-display">Current time: <span id="current-datetime"></span></p>
     <p class="team-members">Team: Newcomers(Chingiz, Sultan, Kaisar) Group: SE-2405</p>
   </footer>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
